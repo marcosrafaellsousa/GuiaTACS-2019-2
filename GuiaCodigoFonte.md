@@ -1,4 +1,5 @@
 # Código-Fonte
+
 Este é um guia do desenvolvedor escrito para disciplina Técnicas avançadas de Construção de Software, disponibilizada no segundo semestre de 2019 para os alunos da UFG cursando Engenharia de Software. O propósito desse guia é concretizar os conhecimentos e lições aprendidos em sala e nos materiais de estudo. 
 Inicialmente esse guia apontará boas práticas em relação a criação de código-fonte limpo.
 
@@ -28,3 +29,26 @@ Desenvolvedores criam nome o tempo todo, nome de pacotes, arquivos, funções, v
 > Uma palavra deve servir apenas a uma finalidade, por exemplo, se existem vários métodos "add" em classes diferentes, que adicionam um objeto a uma lista, e você faz um novo método que soma dois valores, "add" não é o mais adequado, pois cria ambiguidade sobre o que "add" faz, ao invés disso use um nome novo que não está sendo utilizado ainda "sum" por exemplo.
 - Use um padrão de nomeclatura
 > Geralmente cada linguagem tem uma padrão de nomenclatura para métodos, variáveis, classes, constantes, conheça o padrão mais utilizado por sua linguagem.
+
+# Comentários
+
+Comentários são essenciais para o entendimento do código-fonte, se usado de forma significativa. Muitos comentários sem importância apenas poluem o código e perdendo seu própria credibilidade, por isso é importante criar comentários que gerem valor.
+
+## O que levar em consideração na hora de criar comentários
+
+- O código deve se explicar
+> Assim como nos aprofundamos na criação de nomes, comentários não servem para explicar código sujo, a criação de bons nomes de classes, variáveis e funções além de cada um ter uma função clara e bem definida é uma ótima forma do código se explicar, tente gastar mais tempo limpando um código do que o explicando em comentários.
+- Comentários padrão
+> As vezes por motivos legais ou organizacionais é imposto um certo padrão de comentário, porém os comentários não devem servir como acordo de serviço ou licença, apenas referenciar esses artefatos que devem estar documentados em outro lugar.
+- Use comentários para clarificar o uso de bibliotecas prontas e frameworks
+> Bibliotecas e frameworks podem limitar a liberdade de criar nomes e funções, por isso faz sentido usar comentários para melhorar o entendimento do código que utiliza esse tipo de ferramenta
+- Use comentários para descrever decisões tomadas
+> decisões tomadas a nível de algoritmo caso o programador tenha implementado a melhor forma de resolver um problema porém não é muito claro
+- Comentar consequências inesperadas.
+> Por exemplo testes que demoram demais, funções que afetam o ambiente.
+- TODO comments
+> Comentários podem ser usados para apontar debito técnico, por falta de tempo ou muitas outra variáveis um código pode necessitar de refatoração, troca de algoritmo etc. Comentários podem documentar essas necessidades.
+- Comentários padronizados também podem gerar comentários ruins
+> Alguns padrões como java-docs podem ser muito úteis, mas não eliminam completamente a possibilidade de criar comentários ruins
+
+# Funções
